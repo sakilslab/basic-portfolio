@@ -128,11 +128,6 @@ const QuotesMarquee = () => {
           ))}
         </motion.div>
       </div>
-      
-      {/* Hint text */}
-      <p className="text-center text-xs text-muted-foreground/60 mt-3">
-        Drag to explore quotes
-      </p>
     </div>
   );
 };
