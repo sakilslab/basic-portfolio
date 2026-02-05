@@ -1,6 +1,5 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Hero from "@/components/Hero";
-import QuotesMarquee from "@/components/QuotesMarquee";
 
 const socialLinks = [
   { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
@@ -13,7 +12,6 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <Hero />
-      <QuotesMarquee />
       
       {/* Footer */}
       <footer className="py-10 px-4 border-t border-border">

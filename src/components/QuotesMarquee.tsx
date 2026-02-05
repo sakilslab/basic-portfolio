@@ -21,10 +21,10 @@ const QuotesMarquee = () => {
   const duplicatedQuotes = [...quotes, ...quotes];
 
   return (
-    <section className="py-16 overflow-hidden">
+    <div className="overflow-hidden">
       {/* Section header */}
-      <div className="text-center mb-12 px-4">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">
+      <div className="mb-6 px-4 md:px-0">
+        <h2 className="text-xl md:text-2xl font-bold mb-1">
           Random Quotes
         </h2>
         <p className="text-muted-foreground text-sm">
@@ -60,8 +60,7 @@ const QuotesMarquee = () => {
           ))}
         </motion.div>
       </div>
-
-    </section>
+    </div>
   );
 };
 
