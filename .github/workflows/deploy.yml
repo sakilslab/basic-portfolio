@@ -24,10 +24,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
           
-      - name: Install
-        run: npm ci
+      # CHANGED: Using 'npm install' instead of 'npm ci' to prevent lockfile errors
+      - name: Install Dependencies
+        run: npm install
+        
+      # DEBUG STEP: This helps us see if files exist
+      - name: List Files
+        run: ls -R
         
       - name: Build
         run: npm run build
