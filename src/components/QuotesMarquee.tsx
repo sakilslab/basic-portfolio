@@ -20,7 +20,6 @@ const QuoteCard = ({ quote }: { quote: Quote }) => {
 const QuotesMarquee = () => {
   const quotes = useQuotes();
   const containerRef = useRef<HTMLDivElement>(null);
-  const [containerWidth, setContainerWidth] = useState(0);
   const [contentWidth, setContentWidth] = useState(0);
   const x = useMotionValue(0);
   const controls = useAnimation();
@@ -31,7 +30,6 @@ const QuotesMarquee = () => {
 
   useEffect(() => {
     if (containerRef.current) {
-      setContainerWidth(containerRef.current.offsetWidth);
       setContentWidth(containerRef.current.scrollWidth / 3);
     }
   }, [quotes]);
