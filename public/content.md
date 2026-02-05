@@ -12,3 +12,8 @@ Random Quotes
 
 ### Subtitle
 Words that describe me and probably will demotivate others
+
+## Footer
+
+### Copyright
+© 2026 Shakil. All rights reserved.
