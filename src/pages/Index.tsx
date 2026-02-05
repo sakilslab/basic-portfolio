@@ -17,7 +17,7 @@ const Index = () => {
       <Hero />
       
       {/* Footer */}
-      <footer className="py-10 px-4 border-t border-border">
+      <footer className="py-4 px-4 border-t border-border/30 bg-transparent">
         <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
           {/* Social Links */}
           <div className="flex items-center gap-4">
