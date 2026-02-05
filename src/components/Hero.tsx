@@ -18,24 +18,96 @@ const Hero = () => {
             backgroundSize: '60px 60px'
           }}
         />
-        {/* Accent boxes */}
+        
+        {/* Large floating boxes */}
         <motion.div
-          className="absolute top-20 right-20 w-32 h-32 border border-primary/20 rounded-lg"
-          animate={{ rotate: [0, 5, 0] }}
+          className="absolute top-16 right-[15%] w-40 h-40 border border-primary/20 rounded-2xl"
+          animate={{ rotate: [0, 8, 0], y: [0, -15, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-32 right-[25%] w-28 h-28 border border-primary/30 rounded-xl"
+          animate={{ rotate: [0, -10, 0], scale: [1, 1.05, 1] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-40 right-40 w-24 h-24 border border-primary/30 rounded-lg"
-          animate={{ rotate: [0, -5, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-32 left-[5%] w-24 h-24 border border-primary/20 rounded-xl"
+          animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        />
+        
+        {/* Medium boxes */}
+        <motion.div
+          className="absolute top-[60%] right-[10%] w-16 h-16 border border-primary/25 rounded-lg"
+          animate={{ rotate: [0, 15, 0], x: [0, 10, 0] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-40 left-10 w-20 h-20 border border-primary/20 rounded-lg"
-          animate={{ y: [0, -10, 0] }}
+          className="absolute top-[20%] left-[20%] w-20 h-20 border border-primary/15 rounded-lg"
+          animate={{ y: [0, 15, 0], rotate: [0, -8, 0] }}
+          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-[20%] right-[30%] w-14 h-14 border border-primary/20 rounded-lg"
+          animate={{ scale: [1, 1.1, 1], rotate: [0, 12, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
+        
+        {/* Small floating squares */}
+        <motion.div
+          className="absolute top-[45%] left-[8%] w-8 h-8 bg-primary/10 rounded-md"
+          animate={{ y: [0, -25, 0], rotate: [0, 45, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-[30%] right-[8%] w-10 h-10 bg-primary/8 rounded-md"
+          animate={{ x: [0, -15, 0], rotate: [0, -30, 0] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-[40%] left-[30%] w-6 h-6 bg-primary/12 rounded-sm"
+          animate={{ y: [0, 20, 0], x: [0, 10, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-primary/40 rounded-full" />
-        <div className="absolute bottom-1/3 right-1/4 w-3 h-3 bg-primary/30 rounded-full" />
+        
+        {/* Dots/circles */}
+        <motion.div 
+          className="absolute top-[25%] left-[40%] w-3 h-3 bg-primary/40 rounded-full"
+          animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0.7, 0.4] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-[35%] right-[20%] w-4 h-4 bg-primary/30 rounded-full"
+          animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute top-[70%] left-[45%] w-2 h-2 bg-primary/50 rounded-full"
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute top-[15%] right-[40%] w-2 h-2 bg-primary/35 rounded-full"
+          animate={{ scale: [1, 2, 1] }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-[25%] left-[60%] w-3 h-3 bg-primary/25 rounded-full"
+          animate={{ x: [0, 15, 0], y: [0, -10, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
+        
+        {/* Floating lines */}
+        <motion.div
+          className="absolute top-[50%] right-[5%] w-20 h-[2px] bg-primary/20 rounded-full"
+          animate={{ rotate: [15, 25, 15], x: [0, -10, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-[15%] left-[15%] w-16 h-[2px] bg-primary/15 rounded-full"
+          animate={{ rotate: [-10, 5, -10] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
       </div>
 
       <div className="max-w-5xl relative z-10 flex-1 flex flex-col justify-center">
