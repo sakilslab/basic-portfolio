@@ -3,31 +3,39 @@
 ## Hero Section
 
 ### Introduction
+
 A passionate developer crafting digital experiences with clean code and creative solutions. I love turning ideas into reality through technology.
 
 ## Quotes Section
 
 ### Title
+
 Random Quotes
 
 ### Subtitle
+
 Words that describe me and probably will demotivate others
 
 ## Footer
 
 ### Copyright
-© 2026 Shakil. All rights reserved.
+
+© 2026 SAKIL. All rights reserved.
 
 ## Social Links
 
 ### Facebook
-https://facebook.com
+
+https://facebook.com/sakilscode
 
 ### Instagram
-https://instagram.com
+
+https://instagram.com/sakilscode
 
 ### LinkedIn
-https://linkedin.com
+
+https://linkedin.com/in/sakilscode
 
 ### Twitter
-https://x.com
+
+https://x.com/sakilscode
