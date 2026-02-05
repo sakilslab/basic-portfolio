@@ -8,15 +8,9 @@ const Index = () => {
       <QuotesMarquee />
       
       {/* Footer */}
-      <footer className="py-12 px-4 text-center border-t-4 border-foreground">
-        <p className="font-bold">
-          Built with{" "}
-          <span className="text-primary">♥</span>
-          {" "}and{" "}
-          <span className="gradient-funky bg-clip-text text-transparent">creativity</span>
-        </p>
-        <p className="text-muted-foreground mt-2 font-bangla">
-          সৃজনশীলতার সাথে তৈরি
+      <footer className="py-8 px-4 text-center border-t border-border">
+        <p className="text-sm text-muted-foreground">
+          © {new Date().getFullYear()} Shakil
         </p>
       </footer>
     </main>
