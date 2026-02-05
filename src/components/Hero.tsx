@@ -113,64 +113,66 @@ const Hero = () => {
         />
       </div>
 
-      {/* Image fixed on right side */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="absolute right-4 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 z-10"
-      >
-        <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center">
-          <div className="text-center text-muted-foreground">
-            <div className="w-10 h-10 sm:w-14 sm:h-14 md:w-20 md:h-20 mx-auto mb-2 md:mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-              <span className="text-xl sm:text-2xl md:text-3xl">👤</span>
-            </div>
-            <p className="text-xs md:text-sm">Your photo here</p>
-          </div>
-        </div>
-      </motion.div>
-
-      <div className="max-w-6xl relative z-10 flex-1 flex flex-col justify-center pr-36 sm:pr-52 md:pr-72 lg:pr-96">
-        {/* Text content */}
-        <div>
-          {/* Main heading - left aligned */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-4 md:mb-6"
-          >
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-bangla mb-1 md:mb-2">
-              আসসালামুয়ালাইকুম,
-            </p>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight font-bangla">
-              আমি <span className="text-primary">শাকিল</span>.
-            </h1>
-          </motion.div>
-
-          {/* Introduction */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-xl mb-6 md:mb-8 leading-relaxed"
-          >
-            {heroIntroduction || "A passionate developer crafting digital experiences with clean code and creative solutions. I love turning ideas into reality through technology."}
-          </motion.p>
-
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <a
-              href="mailto:contact@sakil.pro.bd"
-              className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-primary text-primary-foreground text-sm sm:text-base font-medium rounded-lg hover:bg-primary/90 transition-colors"
+      <div className="max-w-6xl w-full relative z-10 flex-1 flex items-center">
+        <div className="flex items-center justify-between w-full gap-4 sm:gap-8 md:gap-16">
+          {/* Left side - Text content */}
+          <div className="flex-1 min-w-0">
+            {/* Main heading - left aligned */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-4 md:mb-6"
             >
-              <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-              Email me
-            </a>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-bangla mb-1 md:mb-2">
+                আসসালামুয়ালাইকুম,
+              </p>
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight font-bangla">
+                আমি <span className="text-primary">শাকিল</span>.
+              </h1>
+            </motion.div>
+
+            {/* Introduction */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-xl mb-6 md:mb-8 leading-relaxed"
+            >
+              {heroIntroduction || "A passionate developer crafting digital experiences with clean code and creative solutions. I love turning ideas into reality through technology."}
+            </motion.p>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <a
+                href="mailto:contact@sakil.pro.bd"
+                className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-primary text-primary-foreground text-sm sm:text-base font-medium rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                Email me
+              </a>
+            </motion.div>
+          </div>
+
+          {/* Right side - Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex-shrink-0"
+          >
+            <div className="w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center">
+              <div className="text-center text-muted-foreground">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-lg sm:text-xl md:text-2xl">👤</span>
+                </div>
+                <p className="text-[10px] sm:text-xs md:text-sm">Your photo</p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
