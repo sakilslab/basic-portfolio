@@ -184,7 +184,16 @@ const Hero = () => {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="mt-auto pt-12"
       >
-        <QuotesMarquee title={quotesTitle} subtitle={quotesSubtitle} />
+        <div className="mb-6 px-4 md:px-0 text-center">
+          <h2 className="text-xl md:text-2xl font-bold mb-1">
+            {quotesTitle || "Random Quotes"}
+          </h2>
+          <p className="text-muted-foreground text-sm">
+            {quotesSubtitle || "Words that describe me and probably will demotivate others"}
+          </p>
+        </div>
+
+        <QuotesMarquee />
       </motion.div>
     </section>
   );
