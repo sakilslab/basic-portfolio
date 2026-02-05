@@ -4,7 +4,7 @@ import { quotes, type Quote } from "@/data/quotes";
 const QuoteCard = ({ quote }: { quote: Quote }) => {
   return (
     <div
-      className={`flex-shrink-0 w-80 md:w-96 p-6 mx-4 bg-muted rounded-lg ${
+      className={`flex-shrink-0 w-80 md:w-96 p-6 mx-4 bg-card border border-border rounded-xl ${
         quote.isBangla ? "font-bangla" : "font-english"
       }`}
     >
