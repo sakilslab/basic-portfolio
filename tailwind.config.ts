@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        bangla: ["Hind Siliguri", "sans-serif"],
+        english: ["Space Grotesk", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +61,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "neon-green": "hsl(var(--neon-green))",
+        "electric-purple": "hsl(var(--electric-purple))",
+        "hot-orange": "hsl(var(--hot-orange))",
       },
       borderRadius: {
         lg: "var(--radius)",
