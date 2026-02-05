@@ -7,7 +7,7 @@ const Hero = () => {
   const { heroIntroduction, heroImage, quotesTitle, quotesSubtitle } = useContent();
 
   return (
-    <section className="h-screen flex flex-col justify-center px-4 md:px-8 lg:px-16 py-12 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center px-4 md:px-8 lg:px-16 py-6 sm:py-12 relative overflow-hidden">
       {/* Modern grid/box background */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Grid pattern */}
@@ -113,8 +113,8 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container mx-auto max-w-6xl w-full relative z-10 flex-1 flex items-center">
-        <div className="flex items-center justify-between w-full gap-4 sm:gap-8 md:gap-16">
+      <div className="container mx-auto max-w-6xl w-full relative z-10 flex-1 flex items-center py-4 sm:py-0">
+        <div className="flex items-center justify-between w-full gap-3 sm:gap-8 md:gap-16">
           {/* Left side - Text content */}
           <div className="flex-1 min-w-0">
             {/* Main heading - left aligned */}
@@ -122,12 +122,12 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-4 md:mb-6"
+              className="mb-3 sm:mb-4 md:mb-6"
             >
-              <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-bangla mb-1 md:mb-2">
+              <p className="text-sm sm:text-lg md:text-xl text-muted-foreground font-bangla mb-1">
                 আসসালামুয়ালাইকুম,
               </p>
-              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight font-bangla">
+              <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight font-bangla">
                 আমি <span className="text-primary">শাকিল</span>.
               </h1>
             </motion.div>
@@ -137,7 +137,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-xl mb-6 md:mb-8 leading-relaxed"
+              className="text-muted-foreground text-xs sm:text-sm md:text-lg max-w-xl mb-4 sm:mb-6 md:mb-8 leading-relaxed"
             >
               {heroIntroduction || "A passionate developer crafting digital experiences with clean code and creative solutions. I love turning ideas into reality through technology."}
             </motion.p>
@@ -150,9 +150,9 @@ const Hero = () => {
             >
               <a
                 href="mailto:contact@sakil.pro.bd"
-                className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-primary text-primary-foreground text-sm sm:text-base font-medium rounded-lg hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-3 bg-primary text-primary-foreground text-xs sm:text-base font-medium rounded-lg hover:bg-primary/90 transition-colors"
               >
-                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Mail className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
                 Email me
               </a>
             </motion.div>
@@ -166,7 +166,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex-shrink-0"
             >
-              <div className="w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border border-primary/20">
+              <div className="w-20 h-20 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-xl sm:rounded-2xl overflow-hidden border border-primary/20">
                 <img 
                   src={heroImage} 
                   alt="Profile" 
@@ -183,13 +183,13 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="mt-auto pt-12"
+        className="mt-auto pt-6 sm:pt-12"
       >
-        <div className="mb-6 px-4 md:px-0 text-center">
-          <h2 className="text-xl md:text-2xl font-bold mb-1">
+        <div className="mb-4 sm:mb-6 px-4 md:px-0 text-center">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-1">
             {quotesTitle || "Random Quotes"}
           </h2>
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-xs sm:text-sm">
             {quotesSubtitle || "Words that describe me and probably will demotivate others"}
           </p>
         </div>
