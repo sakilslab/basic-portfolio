@@ -4,7 +4,7 @@ import QuotesMarquee from "./QuotesMarquee";
 import { useContent } from "@/hooks/useContent";
 
 const Hero = () => {
-  const { heroIntroduction, quotesTitle, quotesSubtitle } = useContent();
+  const { heroIntroduction, heroImage, quotesTitle, quotesSubtitle } = useContent();
 
   return (
     <section className="h-screen flex flex-col justify-center px-4 md:px-8 lg:px-16 py-12 relative overflow-hidden">
@@ -159,21 +159,22 @@ const Hero = () => {
           </div>
 
           {/* Right side - Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex-shrink-0"
-          >
-            <div className="w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center">
-              <div className="text-center text-muted-foreground">
-                <div className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-lg sm:text-xl md:text-2xl">👤</span>
-                </div>
-                <p className="text-[10px] sm:text-xs md:text-sm">Your photo</p>
+          {heroImage && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex-shrink-0"
+            >
+              <div className="w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border border-primary/20">
+                <img 
+                  src={heroImage} 
+                  alt="Profile" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          )}
         </div>
       </div>
 
