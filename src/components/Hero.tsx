@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import QuotesMarquee from "./QuotesMarquee";
+import { useContent } from "@/hooks/useContent";
 
 const Hero = () => {
+  const { heroIntroduction, quotesTitle, quotesSubtitle } = useContent();
+
   return (
     <section className="min-h-screen flex flex-col justify-center px-4 md:px-8 lg:px-16 py-12 relative overflow-hidden">
       {/* Modern grid/box background */}
@@ -110,47 +113,68 @@ const Hero = () => {
         />
       </div>
 
-      <div className="max-w-5xl relative z-10 flex-1 flex flex-col justify-center">
-        {/* Main heading - left aligned */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-6"
-        >
-          <p className="text-lg md:text-xl text-muted-foreground font-bangla mb-2">
-            আসসালামুয়ালাইকুম,
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-bangla">
-            আমি <span className="text-primary">শাকিল</span>.
-          </h1>
-        </motion.div>
+      <div className="max-w-6xl relative z-10 flex-1 flex flex-col justify-center">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+          {/* Left side - Text content */}
+          <div className="flex-1">
+            {/* Main heading - left aligned */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-6"
+            >
+              <p className="text-lg md:text-xl text-muted-foreground font-bangla mb-2">
+                আসসালামুয়ালাইকুম,
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-bangla">
+                আমি <span className="text-primary">শাকিল</span>.
+              </h1>
+            </motion.div>
 
-        {/* Introduction */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-muted-foreground text-base md:text-lg max-w-xl mb-8 leading-relaxed"
-        >
-          A passionate developer crafting digital experiences with clean code and creative solutions. 
-          I love turning ideas into reality through technology.
-        </motion.p>
+            {/* Introduction */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="text-muted-foreground text-base md:text-lg max-w-xl mb-8 leading-relaxed"
+            >
+              {heroIntroduction || "A passionate developer crafting digital experiences with clean code and creative solutions. I love turning ideas into reality through technology."}
+            </motion.p>
 
-        {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <a
-            href="mailto:contact@sakil.pro.bd"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <a
+                href="mailto:contact@sakil.pro.bd"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                <Mail className="w-5 h-5" />
+                Email me
+              </a>
+            </motion.div>
+          </div>
+
+          {/* Right side - Placeholder Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex-shrink-0"
           >
-            <Mail className="w-5 h-5" />
-            Email me
-          </a>
-        </motion.div>
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center">
+              <div className="text-center text-muted-foreground">
+                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-3xl">👤</span>
+                </div>
+                <p className="text-sm">Your photo here</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
 
       {/* Quotes in same viewport */}
@@ -160,7 +184,7 @@ const Hero = () => {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="mt-auto pt-12"
       >
-        <QuotesMarquee />
+        <QuotesMarquee title={quotesTitle} subtitle={quotesSubtitle} />
       </motion.div>
     </section>
   );

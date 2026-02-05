@@ -16,19 +16,24 @@ const QuoteCard = ({ quote }: { quote: Quote }) => {
   );
 };
 
-const QuotesMarquee = () => {
+interface QuotesMarqueeProps {
+  title?: string;
+  subtitle?: string;
+}
+
+const QuotesMarquee = ({ title, subtitle }: QuotesMarqueeProps) => {
   // Duplicate quotes for seamless loop
   const duplicatedQuotes = [...quotes, ...quotes];
 
   return (
     <div className="overflow-hidden">
-      {/* Section header */}
-      <div className="mb-6 px-4 md:px-0">
+      {/* Section header - centered */}
+      <div className="mb-6 px-4 md:px-0 text-center">
         <h2 className="text-xl md:text-2xl font-bold mb-1">
-          Random Quotes
+          {title || "Random Quotes"}
         </h2>
         <p className="text-muted-foreground text-sm">
-          Words that describe me and probably will demotivate others
+          {subtitle || "Words that describe me and probably will demotivate others"}
         </p>
       </div>
 
