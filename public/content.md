@@ -6,6 +6,10 @@
 
 I just want to retire. Currently pursuing my Bachelor in Biochemistry and Molecular Biology and also experienced with Web Development (ReactJS, NextJS, NodeJS, ExpressJS, Postgresql). Wondering in the web and looking for opportunnity where I can combine skills from both of the world and make the magic happen.
 
+### Image
+
+/profile.jpg
+
 ## Quotes Section
 
 ### Title

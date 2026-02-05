@@ -7,6 +7,7 @@ interface SocialLink {
 
 interface SiteContent {
   heroIntroduction: string;
+  heroImage: string;
   quotesTitle: string;
   quotesSubtitle: string;
   footerCopyright: string;
@@ -16,6 +17,7 @@ interface SiteContent {
 export const useContent = (): SiteContent => {
   const [content, setContent] = useState<SiteContent>({
     heroIntroduction: "",
+    heroImage: "",
     quotesTitle: "",
     quotesSubtitle: "",
     footerCopyright: "",
@@ -27,6 +29,7 @@ export const useContent = (): SiteContent => {
       .then((res) => res.text())
       .then((text) => {
         const introMatch = text.match(/### Introduction\n([^\n#]+)/);
+        const imageMatch = text.match(/### Image\n([^\n#]+)/);
         const titleMatch = text.match(/### Title\n([^\n#]+)/);
         const subtitleMatch = text.match(/### Subtitle\n([^\n#]+)/);
         const copyrightMatch = text.match(/### Copyright\n([^\n#]+)/);
@@ -45,6 +48,7 @@ export const useContent = (): SiteContent => {
 
         setContent({
           heroIntroduction: introMatch?.[1]?.trim() || "",
+          heroImage: imageMatch?.[1]?.trim() || "",
           quotesTitle: titleMatch?.[1]?.trim() || "",
           quotesSubtitle: subtitleMatch?.[1]?.trim() || "",
           footerCopyright: copyrightMatch?.[1]?.trim() || "",
