@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { quotes, type Quote } from "@/data/quotes";
+import { useQuotes, type Quote } from "@/hooks/useQuotes";
 
 const QuoteCard = ({ quote }: { quote: Quote }) => {
   return (
@@ -17,8 +17,14 @@ const QuoteCard = ({ quote }: { quote: Quote }) => {
 };
 
 const QuotesMarquee = () => {
+  const quotes = useQuotes();
+  
   // Duplicate quotes for seamless loop
   const duplicatedQuotes = [...quotes, ...quotes];
+
+  if (quotes.length === 0) {
+    return null;
+  }
 
   return (
     <div className="overflow-hidden">
@@ -32,7 +38,7 @@ const QuotesMarquee = () => {
         <motion.div
           className="flex flex-nowrap w-max"
           animate={{
-            x: [0, -50 * quotes.length * 8], // Moves based on number of quotes
+            x: [0, -50 * quotes.length * 8],
           }}
           transition={{
             x: {
@@ -53,4 +59,3 @@ const QuotesMarquee = () => {
 };
 
 export default QuotesMarquee;
-
