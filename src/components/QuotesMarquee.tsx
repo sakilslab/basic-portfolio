@@ -16,27 +16,12 @@ const QuoteCard = ({ quote }: { quote: Quote }) => {
   );
 };
 
-interface QuotesMarqueeProps {
-  title?: string;
-  subtitle?: string;
-}
-
-const QuotesMarquee = ({ title, subtitle }: QuotesMarqueeProps) => {
+const QuotesMarquee = () => {
   // Duplicate quotes for seamless loop
   const duplicatedQuotes = [...quotes, ...quotes];
 
   return (
     <div className="overflow-hidden">
-      {/* Section header - centered */}
-      <div className="mb-6 px-4 md:px-0 text-center">
-        <h2 className="text-xl md:text-2xl font-bold mb-1">
-          {title || "Random Quotes"}
-        </h2>
-        <p className="text-muted-foreground text-sm">
-          {subtitle || "Words that describe me and probably will demotivate others"}
-        </p>
-      </div>
-
       {/* Marquee container */}
       <div className="relative">
         {/* Gradient overlays for fade effect */}
@@ -45,7 +30,7 @@ const QuotesMarquee = ({ title, subtitle }: QuotesMarqueeProps) => {
 
         {/* Animated marquee */}
         <motion.div
-          className="flex"
+          className="flex flex-nowrap w-max"
           animate={{
             x: [0, -50 * quotes.length * 8], // Moves based on number of quotes
           }}
@@ -57,8 +42,6 @@ const QuotesMarquee = ({ title, subtitle }: QuotesMarqueeProps) => {
               ease: "linear",
             },
           }}
-          whileHover={{ animationPlayState: "paused" }}
-          style={{ animationPlayState: "running" }}
         >
           {duplicatedQuotes.map((quote, index) => (
             <QuoteCard key={`${quote.author}-${index}`} quote={quote} />
@@ -70,3 +53,4 @@ const QuotesMarquee = ({ title, subtitle }: QuotesMarqueeProps) => {
 };
 
 export default QuotesMarquee;
+
