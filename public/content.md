@@ -17,3 +17,17 @@ Words that describe me and probably will demotivate others
 
 ### Copyright
 © 2026 Shakil. All rights reserved.
+
+## Social Links
+
+### Facebook
+https://facebook.com
+
+### Instagram
+https://instagram.com
+
+### LinkedIn
+https://linkedin.com
+
+### Twitter
+https://x.com
