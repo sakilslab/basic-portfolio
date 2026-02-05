@@ -115,33 +115,7 @@
     box-shadow: 6px 6px 0px hsl(var(--foreground));
   }
 
-  .neo-shadow-lg {
-    box-shadow: 10px 10px 0px hsl(var(--foreground));
-  }
-
   .neo-shadow-primary {
     box-shadow: 6px 6px 0px hsl(var(--primary));
-  }
-
-  .neo-border {
-    border: 3px solid hsl(var(--foreground));
-  }
-
-  .gradient-funky {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--primary)) 0%,
-      hsl(var(--electric-purple)) 50%,
-      hsl(var(--accent)) 100%
-    );
-  }
-
-  .gradient-warm {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--secondary)) 0%,
-      hsl(var(--hot-orange)) 50%,
-      hsl(var(--primary)) 100%
-    );
   }
 }
