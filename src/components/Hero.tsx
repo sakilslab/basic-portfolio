@@ -7,7 +7,7 @@ const Hero = () => {
   const { heroIntroduction, quotesTitle, quotesSubtitle } = useContent();
 
   return (
-    <section className="min-h-screen flex flex-col justify-center px-4 md:px-8 lg:px-16 py-12 relative overflow-hidden">
+    <section className="h-screen flex flex-col justify-center px-4 md:px-8 lg:px-16 py-12 relative overflow-hidden">
       {/* Modern grid/box background */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Grid pattern */}
