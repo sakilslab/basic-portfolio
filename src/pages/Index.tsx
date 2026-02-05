@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Hero from "@/components/Hero";
+import { useContent } from "@/hooks/useContent";
 
 const socialLinks = [
   { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
@@ -9,6 +10,8 @@ const socialLinks = [
 ];
 
 const Index = () => {
+  const { footerCopyright } = useContent();
+
   return (
     <main className="min-h-screen bg-background">
       <Hero />
@@ -34,7 +37,7 @@ const Index = () => {
           
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Shakil. All rights reserved.
+            {footerCopyright || `© ${new Date().getFullYear()} Shakil. All rights reserved.`}
           </p>
         </div>
       </footer>
