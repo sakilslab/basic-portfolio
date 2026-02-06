@@ -15,7 +15,7 @@ const QuoteCard = ({ quote }: { quote: Quote }) => {
         className="text-sm sm:text-base md:text-lg mb-2 sm:mb-3 leading-relaxed text-foreground [&_b]:font-bold [&_i]:italic [&_u]:underline"
         dangerouslySetInnerHTML={{ __html: `"${formattedText}"` }}
       />
-      <p className="text-xs sm:text-sm text-muted-foreground">
+      <p className="text-xs sm:text-sm text-muted-foreground text-right">
         — {quote.author}
       </p>
     </div>
