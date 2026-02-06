@@ -7,7 +7,7 @@ const QuoteCard = ({ quote }: { quote: Quote }) => {
   
   return (
     <div
-      className={`flex-shrink-0 w-72 sm:w-80 md:w-96 p-4 sm:p-6 mx-2 sm:mx-4 bg-card border border-border rounded-xl ${
+      className={`flex-shrink-0 w-72 sm:w-80 md:w-96 p-4 sm:p-6 mx-2 sm:mx-4 bg-card border border-border rounded-xl text-center ${
         quote.isBangla ? "font-bangla" : "font-english"
       }`}
     >
