@@ -1,19 +1,19 @@
 {
   "hero": {
-    "introduction": "I just want to retire. /n Currently pursuing my Bachelor in <b>'Biochemistry and Molecular Biology'</b> and also experienced with Web Development (ReactJS, NextJS, NodeJS, ExpressJS, Postgresql). Wondering in the web and looking for opportunnity where I can combine skills from both of the world and make the magic happen.",
+    "introduction": "Feeling lazy today, I just want to retire. /n Currently pursuing my Bachelor in <b>'Biochemistry and Molecular Biology'</b> and also experienced with <b>Web Development</b> (ReactJS, NextJS, NodeJS, ExpressJS, Postgresql). Wondering in the web and looking for opportunnity where I can combine skills from both of the world and make the magic happen.",
     "image": "/profile.jpg"
   },
   "quotes": {
-    "title": "Random Quotes",
-    "subtitle": "Words that describe me and probably will demotivate others"
+    "title": "Random Demotovating Quotes",
+    "subtitle": "Never ever follow these words... Seriously!"
   },
   "footer": {
-    "copyright": "© 2026 SAKIL. All rights reserved."
+    "copyright": "© 2026 SAKIL's Lab | All rights reserved."
   },
   "socialLinks": [
     { "platform": "Facebook", "href": "https://facebook.com/sakilscode" },
     { "platform": "Instagram", "href": "https://instagram.com/sakilscode" },
-    { "platform": "LinkedIn", "href": "https://linkedin.com/in/sakilscode" },
+    { "platform": "LinkedIn", "href": "https://linkedin.com/in/md-sakil-hasan" },
     { "platform": "Twitter", "href": "https://x.com/sakilscode" }
   ]
 }
