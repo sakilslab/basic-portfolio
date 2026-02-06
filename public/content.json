@@ -1,15 +1,14 @@
 {
   "hero": {
-    "introduction": "Feeling lazy, I just wanna retire.
-      Currently pursuing my Bachelor in 'Biochemistry and Molecular Biology' and also experienced with Web Development (ReactJS, NextJS, NodeJS, ExpressJS, Postgresql) and looking for opportunnity to combine my skills from both worlds and make the magic happen.",
+    "introduction": "Feeling lazy today, I just wanna retire. Anyway, I'm currently pursuing my Bachelor in 'Biochemistry and Molecular Biology' and also experienced with Web Development (ReactJS, NextJS, NodeJS, ExpressJS, Postgresql) and looking for opportunnity to combine my skills from both worlds and make the magic happen.",
     "image": "/profile.jpg"
   },
   "quotes": {
-    "title": "Random Demotivating Quotes",
-    "subtitle": "Never.. ever.. follow these words!"
+    "title": "Random Demotovating Quotes",
+    "subtitle": "Never ever follow these words... Seriously!"
   },
   "footer": {
-    "copyright": "© 2026 SAKIL | All rights reserved."
+    "copyright": "© 2026 SAKIL. All rights reserved."
   },
   "socialLinks": [
     { "platform": "Facebook", "href": "https://facebook.com/sakilscode" },
