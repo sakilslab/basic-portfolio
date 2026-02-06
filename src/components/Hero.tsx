@@ -11,17 +11,17 @@ const Hero = () => {
       {/* Modern grid/box background */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Grid pattern */}
-        <div 
+        <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `
               linear-gradient(to right, hsl(var(--foreground)) 1px, transparent 1px),
               linear-gradient(to bottom, hsl(var(--foreground)) 1px, transparent 1px)
             `,
-            backgroundSize: '60px 60px'
+            backgroundSize: "60px 60px",
           }}
         />
-        
+
         {/* Large floating boxes */}
         <motion.div
           className="absolute top-16 right-[15%] w-40 h-40 border border-primary/20 rounded-2xl"
@@ -38,7 +38,7 @@ const Hero = () => {
           animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         />
-        
+
         {/* Medium boxes */}
         <motion.div
           className="absolute top-[60%] right-[10%] w-16 h-16 border border-primary/25 rounded-lg"
@@ -55,7 +55,7 @@ const Hero = () => {
           animate={{ scale: [1, 1.1, 1], rotate: [0, 12, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
-        
+
         {/* Small floating squares */}
         <motion.div
           className="absolute top-[45%] left-[8%] w-8 h-8 bg-primary/10 rounded-md"
@@ -72,34 +72,34 @@ const Hero = () => {
           animate={{ y: [0, 20, 0], x: [0, 10, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
-        
+
         {/* Dots/circles */}
-        <motion.div 
+        <motion.div
           className="absolute top-[25%] left-[40%] w-3 h-3 bg-primary/40 rounded-full"
           animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0.7, 0.4] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-[35%] right-[20%] w-4 h-4 bg-primary/30 rounded-full"
           animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute top-[70%] left-[45%] w-2 h-2 bg-primary/50 rounded-full"
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute top-[15%] right-[40%] w-2 h-2 bg-primary/35 rounded-full"
           animate={{ scale: [1, 2, 1] }}
           transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-[25%] left-[60%] w-3 h-3 bg-primary/25 rounded-full"
           animate={{ x: [0, 15, 0], y: [0, -10, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
-        
+
         {/* Floating lines */}
         <motion.div
           className="absolute top-[50%] right-[5%] w-20 h-[2px] bg-primary/20 rounded-full"
@@ -124,11 +124,9 @@ const Hero = () => {
               transition={{ duration: 0.6 }}
               className="mb-3 sm:mb-4 md:mb-6"
             >
-              <p className="text-sm sm:text-lg md:text-xl text-muted-foreground font-bangla mb-1">
-                আসসালামুয়ালাইকুম,
-              </p>
+              <p className="text-sm sm:text-lg md:text-xl text-muted-foreground font-bangla mb-1">আসসালামুয়ালাইকুম,</p>
               <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight font-bangla">
-                আমি <span className="text-primary">শাকিল</span>.
+                আমি <span className="text-primary">মোঃ শাকিল হাসান</span>.
               </h1>
             </motion.div>
 
@@ -139,7 +137,8 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.15 }}
               className="text-muted-foreground text-xs sm:text-sm md:text-lg max-w-xl mb-4 sm:mb-6 md:mb-8 leading-relaxed"
             >
-              {heroIntroduction || "A passionate developer crafting digital experiences with clean code and creative solutions. I love turning ideas into reality through technology."}
+              {heroIntroduction ||
+                "A passionate developer crafting digital experiences with clean code and creative solutions. I love turning ideas into reality through technology."}
             </motion.p>
 
             {/* CTA Button */}
@@ -167,11 +166,7 @@ const Hero = () => {
               className="hidden sm:block flex-shrink-0"
             >
               <div className="sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-xl sm:rounded-2xl overflow-hidden border border-primary/20">
-                <img 
-                  src={heroImage} 
-                  alt="Profile" 
-                  className="w-full h-full object-cover"
-                />
+                <img src={heroImage} alt="Profile" className="w-full h-full object-cover" />
               </div>
             </motion.div>
           )}
@@ -180,11 +175,7 @@ const Hero = () => {
         {/* Mobile background image with overlay */}
         {heroImage && (
           <div className="absolute inset-0 sm:hidden z-10">
-            <img 
-              src={heroImage} 
-              alt="" 
-              className="w-full h-full object-cover opacity-30"
-            />
+            <img src={heroImage} alt="" className="w-full h-full object-cover opacity-30" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
           </div>
         )}
@@ -198,9 +189,7 @@ const Hero = () => {
         className="mt-auto pt-6 sm:pt-12"
       >
         <div className="mb-4 sm:mb-6 px-4 md:px-0 text-center">
-          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-1">
-            {quotesTitle || "Random Quotes"}
-          </h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-1">{quotesTitle || "Random Quotes"}</h2>
           <p className="text-muted-foreground text-xs sm:text-sm">
             {quotesSubtitle || "Words that describe me and probably will demotivate others"}
           </p>
