@@ -116,7 +116,7 @@ const Hero = () => {
       <div className="container mx-auto max-w-6xl w-full relative z-10 flex-1 flex items-center py-4 sm:py-0">
         <div className="flex items-center justify-between w-full gap-3 sm:gap-8 md:gap-16">
           {/* Left side - Text content */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 relative z-20">
             {/* Main heading - left aligned */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -158,15 +158,15 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right side - Image */}
+          {/* Right side - Image (hidden on mobile, visible on sm+) */}
           {heroImage && (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex-shrink-0"
+              className="hidden sm:block flex-shrink-0"
             >
-              <div className="w-20 h-20 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-xl sm:rounded-2xl overflow-hidden border border-primary/20">
+              <div className="sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-xl sm:rounded-2xl overflow-hidden border border-primary/20">
                 <img 
                   src={heroImage} 
                   alt="Profile" 
@@ -176,6 +176,18 @@ const Hero = () => {
             </motion.div>
           )}
         </div>
+
+        {/* Mobile background image with overlay */}
+        {heroImage && (
+          <div className="absolute inset-0 sm:hidden z-10">
+            <img 
+              src={heroImage} 
+              alt="" 
+              className="w-full h-full object-cover opacity-30"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/60" />
+          </div>
+        )}
       </div>
 
       {/* Quotes in same viewport */}
