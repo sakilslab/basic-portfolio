@@ -135,11 +135,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="text-muted-foreground text-xs sm:text-sm md:text-lg max-w-xl mb-4 sm:mb-6 md:mb-8 leading-relaxed"
-            >
-              {heroIntroduction ||
-                "A passionate developer crafting digital experiences with clean code and creative solutions. I love turning ideas into reality through technology."}
-            </motion.p>
+              className="text-muted-foreground text-xs sm:text-sm md:text-lg max-w-xl mb-4 sm:mb-6 md:mb-8 leading-relaxed [&_b]:font-bold [&_i]:italic [&_u]:underline"
+              dangerouslySetInnerHTML={{
+                __html: (heroIntroduction || "A passionate developer crafting digital experiences with clean code and creative solutions. I love turning ideas into reality through technology.").replace(/\/n/g, '<br />')
+              }}
+            />
 
             {/* CTA Button */}
             <motion.div

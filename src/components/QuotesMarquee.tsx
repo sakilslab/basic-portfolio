@@ -3,13 +3,18 @@ import { useQuotes, type Quote } from "@/hooks/useQuotes";
 import { useRef, useEffect, useState } from "react";
 
 const QuoteCard = ({ quote }: { quote: Quote }) => {
+  const formattedText = quote.text.replace(/\/n/g, '<br />');
+  
   return (
     <div
       className={`flex-shrink-0 w-72 sm:w-80 md:w-96 p-4 sm:p-6 mx-2 sm:mx-4 bg-card border border-border rounded-xl ${
         quote.isBangla ? "font-bangla" : "font-english"
       }`}
     >
-      <p className="text-sm sm:text-base md:text-lg mb-2 sm:mb-3 leading-relaxed text-foreground">"{quote.text}"</p>
+      <p 
+        className="text-sm sm:text-base md:text-lg mb-2 sm:mb-3 leading-relaxed text-foreground [&_b]:font-bold [&_i]:italic [&_u]:underline"
+        dangerouslySetInnerHTML={{ __html: `"${formattedText}"` }}
+      />
       <p className="text-xs sm:text-sm text-muted-foreground">
         — {quote.author}
       </p>
